@@ -1,0 +1,361 @@
+html,body,#wrapper {
+    overflow:auto;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    padding: 0;
+    border: 0;
+    width: auto;
+    max-width: fit-content;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+/* Catalógo */
+.catalogo{
+box-sizing: border-box;
+position: relative;
+width: 1920px;
+height: 1080px;
+background: #301934;
+border: 1px solid #000000;
+}
+
+/* Rectangle 4 */
+.rectangle4{
+position: absolute;
+width: 1920px;
+height: 223px;
+left: 0px;
+top: 3px;
+background: linear-gradient(180deg, #000000 66.52%, #000000 71.49%, rgba(0, 0, 0, 0.42) 98.43%, rgba(0, 0, 0, 0.35) 99.97%, rgba(0, 0, 0, 0.0677151) 99.97%, rgba(0, 0, 0, 0) 99.98%);
+}
+
+/* Layout */
+.layout{
+position: absolute;
+width: 1920px;
+height: 61px;
+left: 0px;
+top: 226px;
+background: url(images/layout.png);
+background-repeat:no-repeat;
+background-size:cover;
+}
+
+/* Line  */
+.line{
+position: absolute;
+width: 1920px;
+height: 0px;
+left: 0px;
+top: 223px;
+border: 5px solid #FFCD04;
+transform: rotate(0.01deg);
+}
+
+/* Criticas.net */
+.criticasNet{
+box-sizing: border-box;
+position: absolute;
+width: 179px;
+height: 179px;
+left: 907px;
+top: 17px;
+background: url(images/criticas_net.png);
+background-repeat:no-repeat;
+background-size:cover;
+border: 1px solid #000000;
+filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+border-radius: 116px;
+}
+
+/* cadeado */
+.cadeado{
+position: absolute;
+width: 70.25px;
+height: 70px;
+left: calc(50% - 70.25px/2 + 811.13px);
+top: calc(50% - 70px/2 - 364px);
+background: url(images/cadeado.png);
+background-repeat:no-repeat;
+background-size:cover;
+}
+
+/* Sociais */
+.sociais{
+position: absolute;
+width: 391px;
+height: 65px;
+left: 1499px;
+top: 21px;
+background: url(images/sociais.png);
+background-repeat:no-repeat;
+background-size:cover;
+}
+
+/* Botao_catalogo */
+.botaoCatalogo{
+box-sizing: border-box;
+position: absolute;
+width: 160px;
+height: 52.92px;
+left: 59px;
+top: 159px;
+background: #FFCC00;
+border: 1px solid #000000;
+filter: blur(4px);
+}
+
+/* Botao_catalogo */
+.botaoNovaCritica{
+box-sizing: border-box;
+
+position: absolute;
+width: 200px;
+height: 52.92px;
+left: 255px;
+top: 159px;
+background: #FFCC00;
+border: 1px solid #000000;
+filter: blur(4px);
+}
+
+/* Botao_catalogo */
+.botaoCadastrarFilmes{
+box-sizing: border-box;
+position: absolute;
+width: 250px;
+height: 52.92px;
+left: 499px;
+top: 160px;
+background: #FFCC00;
+border: 1px solid #000000;
+filter: blur(4px);
+}
+
+/* Botao_login */
+.botaoLogin{
+box-sizing: border-box;
+position: absolute;
+width: 147px;
+height: 59px;
+left: 1583px;
+top: 153px;
+background: #FFCC00;
+border: 1px solid #000000;
+filter: blur(4px);
+}
+
+/* Login */
+.login{
+position: absolute;
+width: 123px;
+height: 48px;
+left: 1607px;
+top: 158px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 40px;
+line-height: 48px;
+display: flex;
+align-items: center;
+color: #000000;
+border: 1px solid #301934;
+backdrop-filter: blur(4px);
+}
+
+/* Catálogos */
+.catalogos{
+position: absolute;
+width: 158px;
+height: 39px;
+left: 61px;
+top: 165px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 39px;
+display: flex;
+align-items: center;
+text-align: center;
+color: #000000;
+border: 1px solid #000000;
+backdrop-filter: blur(4px);
+}
+
+/* Nova Critica */
+.novaCritica{
+position: absolute;
+width: 185px;
+height: 39px;
+left: 263px;
+top: 167px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 39px;
+display: flex;
+align-items: center;
+text-align: center;
+color: #000000;
+border: 1px solid #000000;
+backdrop-filter: blur(4px);
+}
+
+
+/* Cadastrar Filme */
+.cadastrarFilmes{
+position: absolute;
+width: 260px;
+height: 39px;
+left: 494px;
+top: 167px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 39px;
+display: flex;
+align-items: center;
+text-align: center;
+color: #000000;
+border: 1px solid #000000;
+backdrop-filter: blur(4px);
+}
+
+
+/* catalógo 1 */
+.catalogo1{
+position: absolute;
+width: 325px;
+height: 552px;
+left: 87px;
+top: 333px;
+background: url(images/catal_go_1.png);
+background-repeat:no-repeat;
+background-size:cover;
+}
+
+/* catalógo 2 */
+.catalogo2{
+position: absolute;
+width: 335px;
+height: 552px;
+left: 434px;
+top: 333px;
+background: url(images/catal_go_2.png);
+background-repeat:no-repeat;
+background-size:cover;
+}
+
+/* catalógo 3 */
+.catalogo3{
+position: absolute;
+width: 325px;
+height: 552px;
+left: 802px;
+top: 333px;
+background: url(images/catal_go_3.png);
+background-repeat:no-repeat;
+background-size:cover;
+}
+
+/* catalógo 4 */
+.catalogo4{
+position: absolute;
+width: 311px;
+height: 552px;
+left: 1163px;
+top: 333px;
+background: url(images/catal_go_4.png);
+background-repeat:no-repeat;
+background-size:cover;
+}
+
+/* catalógo 5 */
+.catalogo5{
+position: absolute;
+width: 311px;
+height: 552px;
+left: 1510px;
+top: 333px;
+background: url(images/catal_go_5.png);
+background-repeat:no-repeat;
+background-size:cover;
+}
+
+/* catalógo 6 */
+.catalogo6{
+position: absolute;
+width: 325px;
+height: 552px;
+left: 87px;
+top: 912px;
+background: url(images/catal_go_6.png);
+background-repeat:no-repeat;
+background-size:cover;
+}
+
+/* catalógo 7 */
+.catalogo7{
+position: absolute;
+width: 335px;
+height: 552px;
+left: 434px;
+top: 912px;
+background: url(images/catal_go_7.png);
+background-repeat:no-repeat;
+background-size:cover;
+}
+
+/* catálogo 8 */
+.catalogo8{
+position: absolute;
+width: 322px;
+height: 552px;
+left: 805px;
+top: 912px;
+background: url(images/catal_go_8.png);
+background-repeat:no-repeat;
+background-size:cover;
+}
+
+/* catalógo 9 */
+.catalogo9{
+position: absolute;
+width: 311px;
+height: 552px;
+left: 1163px;
+top: 912px;
+background: url(images/catal_go_9.png);
+background-repeat:no-repeat;
+background-size:cover;
+}
+
+/* catálogo 10 */
+.catalogo10{
+position: absolute;
+width: 322px;
+height: 552px;
+left: 1510px;
+top: 912px;
+background: url(images/catal_go_10.png);
+background-repeat:no-repeat;
+background-size:cover;
+}
+
+/* Rolagem */
+.rolagem{
+position: absolute;
+width: 15.04px;
+height: 1080px;
+left: 1905px;
+top: 0px;
+background: url(images/rolagem.png);
+background-repeat:no-repeat;
+background-size:cover;
+}
