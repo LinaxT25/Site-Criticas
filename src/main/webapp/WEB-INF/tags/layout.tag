@@ -3,7 +3,7 @@
 
 <html>
     <head>
-        <title>Site Críticas</title>
+        <title>Site Criticas</title>
         <jsp:invoke fragment="header"/>
         <style type="text/css">
             html, body {
@@ -135,6 +135,15 @@
     </head>
     <body class="framePrincipal">
         <header>
+            <div class="blackFrame"></div>
+            <div class="layout"></div>
+            <div class="line"></div>
+            <div class="criticasNet"></div>
+            <span class="catalogos">Catálogos</span>
+            <span class="login">Login</span>
+            <span class="novaCritica">Nova Critica</span>
+            <span class="cadastrarFilmes">Cadastrar Filme</span>
+            <div class="cadeado"></div>
             <jsp:doBody/>
         </header>
     </body>
