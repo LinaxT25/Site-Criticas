@@ -7,7 +7,7 @@
         <jsp:invoke fragment="header"/>
         <style type="text/css">
             html, body {
-                margin: 0;
+            margin: 0;
             }
 
             .framePrincipal {
@@ -28,16 +28,6 @@
             background: black;
             }
 
-            .layout {
-            position: relative;
-            min-width: 1024px;
-            max-width: 1920px;
-            height: 50px;
-            background: url(resources/images/layout.png);
-            background-repeat:no-repeat;
-            background-size:cover;
-            }
-
             .line {
             position: relative;
             min-width: 1024px;
@@ -50,7 +40,7 @@
             width: 140px;
             height: 140px;
             left: 50%;
-            top: -205px;
+            top: -160px;
             background: url(resources/images/criticas_net.png);
             background-repeat:no-repeat;
             background-size:cover;
@@ -62,7 +52,7 @@
             width: 160px;
             height: 40px;
             left: 2%;
-            top: -240px;
+            top: -195px;
             font-family: 'Inter';
             font-weight: 400;
             font-size: 32px;
@@ -78,7 +68,7 @@
             width: 185px;
             height: 40px;
             left: 13%;
-            top: -320px;
+            top: -275px;
             font-family: 'Inter';
             font-weight: 400;
             font-size: 32px;
@@ -94,7 +84,7 @@
             width: 220px;
             height: 40px;
             left: 25.75%;
-            top: -360px;
+            top: -315px;
             font-family: 'Inter';
             font-weight: 400;
             font-size: 32px;
@@ -109,7 +99,7 @@
             position: relative;
             width: 140px;
             height: 40px;
-            top: -280px;
+            top: -235px;
             left: 80%;
             font-family: 'Inter';
             font-weight: 400;
@@ -125,7 +115,7 @@
             position: relative;
             width: 50px;
             height: 50px;
-            top: -410px;
+            top: -365px;
             left: 85.5%;
             background: url(resources/images/cadeado.png);
             background-repeat:no-repeat;
@@ -136,14 +126,13 @@
     <body class="framePrincipal">
         <header>
             <div class="blackFrame"></div>
-            <div class="layout"></div>
             <div class="line"></div>
             <div class="criticasNet"></div>
+            <div class="cadeado"></div>
             <span class="catalogos">Catálogos</span>
             <span class="login">Login</span>
             <span class="novaCritica">Nova Critica</span>
             <span class="cadastrarFilmes">Cadastrar Filme</span>
-            <div class="cadeado"></div>
             <jsp:doBody/>
         </header>
     </body>
