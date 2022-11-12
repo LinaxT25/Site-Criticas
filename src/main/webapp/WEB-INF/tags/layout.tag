@@ -1,11 +1,11 @@
 <%@ tag description="Page template" pageEncoding="UTF-8"%>
-<%@attribute name="header" fragment="true" %>
+<%@ attribute name="header" fragment="true" %>
 
 <html>
     <head>
         <title>Site Criticas</title>
         <jsp:invoke fragment="header"/>
-        <style type="text/css">
+        <style>
             html, body {
                 margin: 0;
             }
@@ -114,14 +114,15 @@
         </style>
     </head>
     <body class="framePrincipal">
+    <script src="popup.js"></script>
         <header>
             <div class="blackFrame"></div>
             <div class="line"></div>
             <div class="criticasNet"></div>
-            <span class="catalogos">Catálogos</span>
-            <span class="login">Login</span>
-            <span class="novaCritica">Nova Critica</span>
-            <span class="cadastrarFilmes">Cadastrar Filme</span>
+            <span class="catalogos" onclick="window.open('catalogos')" style="cursor:pointer;">Catálogos</span>
+            <span class="login" onclick="window.open('login')" style="cursor:pointer;">Login</span>
+            <span class="novaCritica" onclick="" style="cursor:pointer;">Nova Critica</span>
+            <span class="cadastrarFilmes" onclick="window.open('cadastro')" style="cursor:pointer;">Cadastrar Filme</span>
             <jsp:doBody/>
         </header>
     </body>

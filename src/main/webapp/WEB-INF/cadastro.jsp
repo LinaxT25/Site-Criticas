@@ -3,7 +3,7 @@
 <t:layout>
     <jsp:attribute name="header"></jsp:attribute>
     <jsp:body>
-    <style type="text/css">
+    <style>
             header {
                 overflow:clip;
                 min-width: 1024px;

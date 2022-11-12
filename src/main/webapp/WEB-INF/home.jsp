@@ -4,7 +4,7 @@
 <t:layout>
     <jsp:attribute name="header"></jsp:attribute>
     <jsp:body>
-        <style type="text/css">
+        <style>
             .layout {
                 position: relative;
                 min-width: 1024px;
