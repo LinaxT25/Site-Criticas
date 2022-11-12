@@ -3,7 +3,7 @@
 *Navegar por críticas públicas  
 *Visualizar críticas  
 *Escrever críticas  
-*Alterar e remover críticas 
+*Alterar e remover críticas  
 *Buscar por críticas  
 *Cadastrar filmes/séries/livros (um pelo menos)  
 
