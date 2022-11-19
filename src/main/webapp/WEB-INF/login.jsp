@@ -77,16 +77,18 @@
                 background-color: #FFCD04;
                 transition: .5s;
             }
+
         </style>
     </head>
     <body>
         <div id="loginContainer">
-            <form method="post">
+            <form action="login" method="post">
                 <label for="user">User</label>
                 <input type="text" id="user" name="User"/>
                 <label for="password">Password</label>
-                <input type="text" id="password" name="Password"/>
-                <input type = "submit" value = "Login">
+                <input type="password" id="password" name="Password"/>
+                <input type="submit" name="Login" value="Login">
+                <input type="submit" name="Cadastro" value="Cadastro">
             </form>
         </div>
     </body>

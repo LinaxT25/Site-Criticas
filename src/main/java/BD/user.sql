@@ -1,1 +1,1 @@
-INSERT OR IGNORE INTO users (name, email, password) VALUES ('Hudson Borges', 'hudson@ufms.br', '$2a$12$hDQmd6T4kJTp785poxhNpuaKGqOOmBiRczVUhZh.ktWOsCX1fhfgm')
+INSERT OR IGNORE INTO User (login, password) VALUES ('Admin', 'Admin')
