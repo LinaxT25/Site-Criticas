@@ -114,7 +114,6 @@
         </style>
     </head>
     <body class="framePrincipal">
-    <script src="popup.js"></script>
         <header>
             <div class="blackFrame"></div>
             <div class="line"></div>

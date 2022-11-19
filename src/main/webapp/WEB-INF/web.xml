@@ -7,17 +7,33 @@
     <servlet-name>HomeController</servlet-name>
     <servlet-class>HomeController</servlet-class>
   </servlet>
+  <servlet-mapping>
+    <servlet-name>HomeController</servlet-name>
+    <url-pattern>/home</url-pattern>
+  </servlet-mapping>
   <servlet>
     <servlet-name>CatalogosController</servlet-name>
     <servlet-class>CatalogosController</servlet-class>
   </servlet>
+  <servlet-mapping>
+    <servlet-name>CatalogosController</servlet-name>
+    <url-pattern>/catalogos</url-pattern>
+  </servlet-mapping>
   <servlet>
     <servlet-name>CadastroController</servlet-name>
     <servlet-class>CadastroController</servlet-class>
   </servlet>
+  <servlet-mapping>
+    <servlet-name>CadastroController</servlet-name>
+    <url-pattern>/cadastro</url-pattern>
+  </servlet-mapping>
   <servlet>
     <servlet-name>LoginController</servlet-name>
     <servlet-class>LoginController</servlet-class>
   </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginController</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
 </web-app>
 

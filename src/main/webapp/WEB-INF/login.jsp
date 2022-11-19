@@ -78,23 +78,10 @@
                 transition: .5s;
             }
         </style>
-        <script>
-            let message = `${message}`;
-            if(message)
-                alert(message);
-            function passwordCheck() {
-                let pass = document.getElementById("password").value;
-                let passConfirm = document.getElementById("password-confirm").value;
-                if (pass !== passConfirm) {
-                    alert("Senhas não conferem!");
-                    return false;
-                }
-            }
-        </script>
     </head>
     <body>
         <div id="loginContainer">
-            <form action="">
+            <form method="post">
                 <label for="user">User</label>
                 <input type="text" id="user" name="User"/>
                 <label for="password">Password</label>
