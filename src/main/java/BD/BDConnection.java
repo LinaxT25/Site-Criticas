@@ -22,14 +22,11 @@ public class BDConnection {
         String SQLSChema = "CREATE SCHEMA " + "Data";
         String SQL = "CREATE TABLE Data.Users" +
                     "(" +
-                    "Login varchar(255), " +
-                    "Password varchar(255)" +
+                    "Login varchar(1024), " +
+                    "Password varchar(1024)" +
                     ")";
-        try {
-            connect().createStatement().executeUpdate(SQLSChema);
-            connect().prepareStatement(SQL).execute();
-        } catch (SQLException e) {
-            System.out.println(e.getMessage());
-        }
+
+        connect().createStatement().executeUpdate(SQLSChema);
+        connect().prepareStatement(SQL).execute();
     }
 }
