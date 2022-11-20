@@ -6,6 +6,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 
 public class BDConnection {
+    /* Method for connect to database in postgresql */
     public Connection connect() throws Exception {
         InitialContext context =  new InitialContext();
         if(context == null) {
@@ -18,12 +19,14 @@ public class BDConnection {
         return dataSource.getConnection();
     }
 
+    /* Script for creating new schema and table in BD for easiness */
     public void initilizationBD() throws Exception {
         String SQLSChema = "CREATE SCHEMA " + "Data";
         String SQL = "CREATE TABLE Data.Users" +
                     "(" +
                     "Login varchar(1024), " +
-                    "Password varchar(1024)" +
+                    "Password varchar(1024)," +
+                    "ID varchar(1024)" +
                     ")";
 
         connect().createStatement().executeUpdate(SQLSChema);

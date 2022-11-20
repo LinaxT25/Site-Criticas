@@ -9,13 +9,15 @@ public class BDSearch {
     private String SQL;
     private int search = 0;
 
-    public boolean userSearch(Connection connection) {
-        SQL = "SELECT COUNT(Login) FROM data.users";
+    /* Search a user in database postgresql using SQL */
+    public boolean userSearch(Connection connection , String user) {
+        SQL = "SELECT COUNT(Login) FROM data.users WHERE login LIKE " +
+                "'%" + user + "%'";
         try {
-            Statement stmt = connection.createStatement();
-            ResultSet rs = stmt.executeQuery(SQL);
-            rs.next();
-            search = rs.getInt(1);
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(SQL);
+            resultSet.next();
+            search = resultSet.getInt(1);
             connection.close();
 
             if(search != 0) {
@@ -26,6 +28,46 @@ public class BDSearch {
         } catch (SQLException ex) {
             System.out.println(ex.getMessage());
             return false;
+        }
+    }
+
+    /* Verifies if password sent by a user is the same in database postgresql with SQL */
+    public boolean passwordCheck(Connection connection, String password) {
+        SQL = "SELECT COUNT(Password) FROM data.users WHERE Password LIKE " +
+                "'%" + password + "%'";
+        try {
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(SQL);
+            resultSet.next();
+            search = resultSet.getInt(1);
+            connection.close();
+
+            if(search != 0) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+            return false;
+        }
+    }
+
+    /* If the login and password is corrected then retrieve a unique ID from user in database postgresql with SQL */
+    public String idRetrive(Connection connection, String login, String password ) {
+        SQL = "SELECT ID FROM data.users WHERE Login LIKE " +
+                "'%" + login + "%'" +
+                " AND " +
+                "Password LIKE " +
+                "'%" + password + "%'";
+        try {
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(SQL);
+            resultSet.next();
+            return resultSet.getString(1);
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+            return null;
         }
     }
 }

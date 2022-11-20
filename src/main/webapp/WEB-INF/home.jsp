@@ -1,3 +1,4 @@
+<%@ page import="java.io.PrintWriter" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
@@ -19,3 +20,10 @@
         <div class="layout"></div>
     </jsp:body>
 </t:layout>
+<% String message = (String)request.getAttribute("alertMsg");%>
+<script>
+    var msg = "<%=message%>";
+    if(Object.entries(msg).length > 4) {
+        alert(msg);
+    }
+</script>
