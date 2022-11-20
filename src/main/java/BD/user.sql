@@ -1,1 +1,0 @@
-INSERT OR IGNORE INTO User (login, password) VALUES ('Admin', 'Admin')
