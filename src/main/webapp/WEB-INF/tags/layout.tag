@@ -120,7 +120,7 @@
             <div class="criticasNet"></div>
             <span class="catalogos" onclick="window.open('catalogos')" style="cursor:pointer;">Catálogos</span>
             <span class="login" onclick="window.open('login')" style="cursor:pointer;">Login</span>
-            <span class="novaCritica" onclick="" style="cursor:pointer;">Nova Critica</span>
+            <span class="novaCritica" onclick="window.open('criticas')" style="cursor:pointer;">Nova Critica</span>
             <span class="cadastrarFilmes" onclick="window.open('cadastro')" style="cursor:pointer;">Cadastrar Filme</span>
             <jsp:doBody/>
         </header>
