@@ -1,36 +1,78 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@taglib prefix="t" tagdir="/WEB-INF/tags" %>
 
-<% String Titulo = (String) request.getAttribute("Titulo");%>
-<% String Image = (String) request.getAttribute("Image");%>
+<% String images [] = new String[255];
+    for(int i = 1; i <= (int) request.getAttribute("numberOfImages"); i++) {
+        images[i] = (String) request.getAttribute("Image" + i);
+    }
+%>
+
 <t:layout>
     <jsp:attribute name="header"></jsp:attribute>
     <jsp:body>
     </jsp:body>
 </t:layout>
-<div class="Posters" id="images">
-    <h1><%=Titulo%></h1>
-<img src="data:image/png;base64,<%=Image%>"/>
-</div>
 
-<script>
-    /*
-    function createImages(count, elementId) {
-        println(<%=Image%>)
-        // Get the container element where you want to create the images
-        var element = document.getElementById("images")
-        // Loop count times over to create count image elements
-        for (var i = 0 ; i < count ; i++) {
-
-            // Create a new image element
-            var imageElement = document.createElement('img')
-
-            // Set the source to index.jpg where index is 0,1,2,3.... count
-            imageElement.setAttribute('src', i + ".jpg")
-
-            // Append the new image element to the choosen container.
-            element.appendChild(imageElement)
-        }
+<style>
+    img {
+        content: '';
+        position: relative;
+        top: -300px;
+        margin-top: 5%;
+        margin-left: 3%;
+        height: 300px;
+        width: 200px;
     }
-*/
-</script>
+    a {
+        text-decoration: none;
+    }
+</style>
+<a href="<%request.getContextPath();%>?movie=id1">
+    <img src="data:image/png;base64,<%=images[1]%>" onerror="this.style.display='none'">
+</a>
+<a href="<%request.getContextPath();%>?movie=id2">
+    <img src="data:image/png;base64,<%=images[2]%>" onerror="this.style.display='none'">
+</a>
+<a href="<%request.getContextPath();%>?movie=id3">
+    <img src="data:image/png;base64,<%=images[3]%>" onerror="this.style.display='none'">
+</a>
+<a href="<%request.getContextPath();%>?movie=id4">
+    <img src="data:image/png;base64,<%=images[4]%>" onerror="this.style.display='none'">
+</a>
+<a href="<%request.getContextPath();%>?movie=id5">
+    <img src="data:image/png;base64,<%=images[5]%>" onerror="this.style.display='none'">
+</a>
+<a href="<%request.getContextPath();%>?movie=id6">
+    <img src="data:image/png;base64,<%=images[6]%>" onerror="this.style.display='none'">
+</a>
+<a href="<%request.getContextPath();%>?movie=id6">
+    <img src="data:image/png;base64,<%=images[7]%>" onerror="this.style.display='none'">
+</a>
+<a href="<%request.getContextPath();%>?movie=id6">
+    <img src="data:image/png;base64,<%=images[8]%>" onerror="this.style.display='none'">
+</a>
+<a href="<%request.getContextPath();%>?movie=id6">
+    <img src="data:image/png;base64,<%=images[9]%>" onerror="this.style.display='none'">
+</a>
+<a href="<%request.getContextPath();%>?movie=id6">
+    <img src="data:image/png;base64,<%=images[10]%>" onerror="this.style.display='none'">
+</a>
+<a href="<%request.getContextPath();%>?movie=id6">
+    <img src="data:image/png;base64,<%=images[11]%>" onerror="this.style.display='none'">
+</a>
+<a href="<%request.getContextPath();%>?movie=id6">
+    <img src="data:image/png;base64,<%=images[12]%>" onerror="this.style.display='none'">
+</a>
+<a href="<%request.getContextPath();%>?movie=id6">
+    <img src="data:image/png;base64,<%=images[13]%>" onerror="this.style.display='none'">
+</a>
+
+
+
+
+
+
+
+
+
+

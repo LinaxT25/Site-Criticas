@@ -7,6 +7,7 @@ import java.sql.Statement;
 
 public class BDRetrieveObra {
     private String SQL;
+    private String [] images = new String[255];
 
     public String retrieveTitulo(Connection connection) throws SQLException {
         SQL = "Select Titulo FROM data.obras";
@@ -51,14 +52,14 @@ public class BDRetrieveObra {
 
     }
 
-    public String retrieveImage(Connection connection) throws SQLException {
+    public String[] retrieveImage(Connection connection) throws SQLException {
         SQL = "Select Image FROM data.obras";
 
         Statement statement = connection.createStatement();
         ResultSet resultSet = statement.executeQuery(SQL);
-        resultSet.next();
-
-        return resultSet.getString(1);
-
+       for(int i = 0 ; resultSet.next(); i++) {
+           this.images[i] = resultSet.getString(1);
+       }
+        return this.images;
     }
 }

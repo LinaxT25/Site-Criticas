@@ -39,13 +39,13 @@ public class CadastroController extends HttpServlet {
             try {
                 if(session.getAttribute("ID") != null) {
                     if(upload != null && titulo != null) {
+                        //TODO making a verification in case movie already exists
                         //Encoding image to string to fit in database
                         String encoding = Base64.getEncoder()
                                 .encodeToString(IOUtils.toByteArray(upload.getInputStream()));
                         databaseAdd.obraAdd(titulo,genero,duracao,sinopse,encoding, databaseConnection.connect());
-                        req.setAttribute("numberOfMovies", databaseSearch.registeredMovies(databaseConnection.connect()));
                         req.setAttribute("alertMsg", "Movie registered with success!");
-                        req.getRequestDispatcher("/WEB-INF/catalogos.jsp").forward(req, resp);
+                        req.getRequestDispatcher("/WEB-INF/home.jsp").forward(req, resp);
                     } else {
                         req.setAttribute("alertMsg", "Title is empty or you don't upload a file!");
                     }
