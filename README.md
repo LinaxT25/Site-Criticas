@@ -19,8 +19,8 @@
 Página principal X  
 Página Catalogos -  
 Pagina Cadastro Filme X    
-Pagina Cadastro Crítica   
-Página Login -  
+Pagina Cadastro Crítica X   
+Página Login  X 
 
 ++++JS & CSS ++++  
 Redirecionamento X  
@@ -29,9 +29,9 @@ Display Catalógos
 Efeitos  
 
 ++++Banco de Dados & JAVA++++  
-Cadastrar usuário  
-Logar usuário  
+Cadastrar usuário  X
+Logar usuário  X
 Alterar e remover dados(críticas)  
-Cadastrar as críticas  
-Cadastrar filmes  
+Cadastrar as críticas  X
+Cadastrar filmes  X
 
