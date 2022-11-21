@@ -49,9 +49,5 @@
     <servlet-name>CriticasController</servlet-name>
     <url-pattern>/criticas</url-pattern>
   </servlet-mapping>
-<<<<<<< HEAD
-=======
-
->>>>>>> acc3701d7df693cc41befd869ca008e8696f49ff
 </web-app>
 
