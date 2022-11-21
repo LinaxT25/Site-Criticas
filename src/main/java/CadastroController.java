@@ -1,5 +1,6 @@
 import BD.BDAdd;
 import BD.BDConnection;
+import BD.BDSearch;
 import org.apache.commons.io.IOUtils;
 
 import javax.servlet.ServletException;
@@ -17,6 +18,7 @@ public class CadastroController extends HttpServlet {
     private static final long serialVersionUID = 1L;
     BDConnection databaseConnection = new BDConnection();
     BDAdd databaseAdd = new BDAdd();
+    BDSearch databaseSearch = new BDSearch();
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
@@ -41,7 +43,9 @@ public class CadastroController extends HttpServlet {
                         String encoding = Base64.getEncoder()
                                 .encodeToString(IOUtils.toByteArray(upload.getInputStream()));
                         databaseAdd.obraAdd(titulo,genero,duracao,sinopse,encoding, databaseConnection.connect());
+                        req.setAttribute("numberOfMovies", databaseSearch.registeredMovies(databaseConnection.connect()));
                         req.setAttribute("alertMsg", "Movie registered with success!");
+                        req.getRequestDispatcher("/WEB-INF/catalogos.jsp").forward(req, resp);
                     } else {
                         req.setAttribute("alertMsg", "Title is empty or you don't upload a file!");
                     }

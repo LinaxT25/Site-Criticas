@@ -70,4 +70,20 @@ public class BDSearch {
             return null;
         }
     }
+
+    public int registeredMovies(Connection connection) {
+        SQL = "SELECT COUNT(*) FROM data.obras";
+        int count = 0;
+
+        try {
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(SQL);
+            resultSet.next();
+            count = resultSet.getInt(1);
+            return  count;
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+            return -1;
+        }
+    }
 }
