@@ -30,18 +30,11 @@ public class CriticasController extends HttpServlet {
         String critica = req.getParameter("Criticadaobra");
         String cadastro = req.getParameter("Cadastrar");
 
-        try {
-            databaseConnection.initilizationBD();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-
         if(cadastro != null) {
             HttpSession session = req.getSession();
-            String userID = session.getAttribute("ID").toString();
-            System.out.println(userID);
             try {
-                if (!userID.isEmpty()) {
+                if (session.getAttribute("ID") != null) {
+                    String userID = session.getAttribute("ID").toString();
                     databaseAdd.criticaAdd(titulo, genero, critica, userID, databaseConnection.connect());
                     req.setAttribute("alertMsg", "Review has been post with success!");
                 } else {
