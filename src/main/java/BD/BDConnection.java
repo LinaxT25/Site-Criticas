@@ -31,7 +31,19 @@ public class BDConnection {
                     ")";
 
         connect().createStatement().executeUpdate(SQLSChema);
-        connect().prepareStatement(SQL).execute();
+        connect().createStatement().executeUpdate(SQL);
+
+        SQL = "CREATE TABLE Data.obras" +
+                "(" +
+                "Titulo varchar(1024) NOT NULL," +
+                "Genero varchar(1024)," +
+                "Duracao varchar(1024)," +
+                "Sinopse varchar(5012)," +
+                "Image varchar(1048575)," +
+                "PRIMARY KEY(Titulo)" +
+                ")";
+
+        connect().createStatement().executeUpdate(SQL);
 
         SQL = "CREATE TABLE Data.criticas" +
                 "(" +
@@ -39,8 +51,8 @@ public class BDConnection {
                 "Genero varchar(1024)," +
                 "Critica varchar(5012)," +
                 "UserID varchar(1024) NOT NULL," +
-                "PRIMARY KEY (Titulo)," +
-                "FOREIGN KEY(UserID) REFERENCES Data.users(ID)" +
+                "FOREIGN KEY (Titulo) REFERENCES Data.obras(Titulo)," +
+                "FOREIGN KEY (UserID) REFERENCES Data.users(ID)" +
                 ")";
 
         connect().createStatement().executeUpdate(SQL);

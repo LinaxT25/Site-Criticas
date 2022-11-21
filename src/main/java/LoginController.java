@@ -47,7 +47,6 @@ public class LoginController extends HttpServlet {
                     req.setAttribute("alertMsg", "User already exists!");
                 }
                 req.getRequestDispatcher("/WEB-INF/home.jsp").forward(req,resp);
-                resp.sendRedirect("home");
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }
@@ -57,10 +56,14 @@ public class LoginController extends HttpServlet {
                 if(databaseSearch.userSearch(databaseConnection.connect(),login)) {
                     if(databaseSearch.passwordCheck(databaseConnection.connect(),password)) {
                         HttpSession session = req.getSession();
-                        //Getting a ID from user with logged in system and forwarding in session
-                       session.setAttribute("ID",databaseSearch.idRetrive
-                               (databaseConnection.connect(),login,password));
-                       req.setAttribute("alertMsg", "Logged with success!");
+                        if(session.getAttribute("ID") == null) {
+                            //Getting a ID from user with logged in system and forwarding in session
+                            session.setAttribute("ID", databaseSearch.idRetrive
+                                    (databaseConnection.connect(), login, password));
+                            req.setAttribute("alertMsg", "Logged with success!");
+                        } else {
+                            req.setAttribute("alertMsg", "User already logged in system!");
+                        }
                     } else {
                         req.setAttribute("alertMsg", "Wrong Password!");
                     }
@@ -68,7 +71,6 @@ public class LoginController extends HttpServlet {
                     req.setAttribute("alertMsg", "User not exist!");
                 }
                 req.getRequestDispatcher("/WEB-INF/home.jsp").forward(req,resp);
-                resp.sendRedirect("home");
             } catch (Exception e) {
                 throw new RuntimeException(e);
             }

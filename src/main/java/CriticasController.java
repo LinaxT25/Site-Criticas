@@ -16,8 +16,6 @@ public class CriticasController extends HttpServlet {
     private static final long serialVersionUID = 1L;
     BDConnection databaseConnection = new BDConnection();
     BDAdd databaseAdd = new BDAdd();
-    BDSearch databaseSearch = new BDSearch();
-
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.getRequestDispatcher("/WEB-INF/criticas.jsp").forward(req, resp);
@@ -33,15 +31,18 @@ public class CriticasController extends HttpServlet {
         if(cadastro != null) {
             HttpSession session = req.getSession();
             try {
-                if (session.getAttribute("ID") != null) {
+                if(session.getAttribute("ID") != null) {
                     String userID = session.getAttribute("ID").toString();
-                    databaseAdd.criticaAdd(titulo, genero, critica, userID, databaseConnection.connect());
-                    req.setAttribute("alertMsg", "Review has been post with success!");
+                    if(titulo != null && critica != null) {
+                        databaseAdd.criticaAdd(titulo, genero, critica, userID, databaseConnection.connect());
+                        req.setAttribute("alertMsg", "Review has been post with success!");
+                    } else {
+                        req.setAttribute("alertMsg", "Title or review is null!");
+                    }
                 } else {
                     req.setAttribute("alertMsg", "User not logged in system!");
                 }
                 req.getRequestDispatcher("/WEB-INF/home.jsp").forward(req, resp);
-                resp.sendRedirect("home");
             } catch (Exception e) {
                 System.out.println(e.getMessage());
             }
