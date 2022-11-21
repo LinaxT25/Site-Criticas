@@ -29,9 +29,9 @@ Display Catalógos
 Efeitos  
 
 ++++Banco de Dados & JAVA++++  
-Cadastrar usuário  X
-Logar usuário  X
+Cadastrar usuário   X
+Logar usuário   X
 Alterar e remover dados(críticas)  
-Cadastrar as críticas  X
-Cadastrar filmes  X
+Cadastrar as críticas   X
+Cadastrar filmes   X
 
