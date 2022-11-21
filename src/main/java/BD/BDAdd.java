@@ -13,5 +13,17 @@ public class BDAdd {
         preparedStatement.setString(2, password);
         preparedStatement.setString(3, id);
         preparedStatement.executeUpdate();
+        connection.close();
+    }
+
+    public void criticaAdd(String titulo, String genero, String critica, String ID, Connection connection) throws SQLException {
+        SQL = "INSERT INTO data.criticas(Titulo,Genero,Critica,UserID) VALUES(?,?,?,?)";
+        PreparedStatement preparedStatement = connection.prepareStatement(SQL, Statement.RETURN_GENERATED_KEYS);
+        preparedStatement.setString(1,titulo);
+        preparedStatement.setString(2,genero);
+        preparedStatement.setString(3,critica);
+        preparedStatement.setString(4,ID);
+        preparedStatement.executeUpdate();
+        connection.close();
     }
 }

@@ -51,14 +51,14 @@
             }
        </style>
        <div class="Criticas">
-          <form>
+          <form action="criticas" method="post">
                <label for="titulo">Título do Filme:</label>
-               <input type="text" id="titulo" name="titulodofilme"/>
+               <input type="text" id="titulo" name="Titulodofilme"/>
                <label for="genero">Gênero:</label>
-               <input type="text" id="genero" name="generodaobra"/>
+               <input type="text" id="genero" name="Generodaobra"/>
                <label for="critica">Crítica:</label>
-               <textarea id="critica" name="criticadaobra" rows="6" cols="50"></textarea>
-               <input type="submit" value="Cadastrar Critica"/>
+               <textarea id="critica" name="Criticadaobra" rows="6" cols="50"></textarea>
+               <input type="submit" name="Cadastrar" value="Cadastrar Critica"/>
           </form>
        </div>
     </jsp:body>

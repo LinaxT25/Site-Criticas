@@ -22,14 +22,27 @@ public class BDConnection {
     /* Script for creating new schema and table in BD for easiness */
     public void initilizationBD() throws Exception {
         String SQLSChema = "CREATE SCHEMA " + "Data";
-        String SQL = "CREATE TABLE Data.Users" +
+        String SQL = "CREATE TABLE Data.users" +
                     "(" +
-                    "Login varchar(1024), " +
-                    "Password varchar(1024)," +
-                    "ID varchar(1024)" +
+                    "Login varchar(1024) NOT NULL, " +
+                    "Password varchar(1024) NOT NULL," +
+                    "ID varchar(1024) NOT NULL," +
+                    "PRIMARY KEY(ID)" +
                     ")";
 
         connect().createStatement().executeUpdate(SQLSChema);
         connect().prepareStatement(SQL).execute();
+
+        SQL = "CREATE TABLE Data.criticas" +
+                "(" +
+                "Titulo varchar(1024) NOT NULL," +
+                "Genero varchar(1024)," +
+                "Critica varchar(5012)," +
+                "UserID varchar(1024) NOT NULL," +
+                "PRIMARY KEY (Titulo)," +
+                "FOREIGN KEY(UserID) REFERENCES Data.users(ID)" +
+                ")";
+
+        connect().createStatement().executeUpdate(SQL);
     }
 }
