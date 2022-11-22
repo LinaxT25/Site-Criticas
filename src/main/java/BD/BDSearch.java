@@ -86,4 +86,18 @@ public class BDSearch {
             return -1;
         }
     }
+
+    public String loginById(Connection connection, String userID) {
+        SQL = "SELECT Login FROM data.users WHERE ID LIKE " + "'%" + userID + "%'";
+
+        try {
+            Statement statement = connection.createStatement();
+            ResultSet resultSet = statement.executeQuery(SQL);
+            resultSet.next();
+            return resultSet.getString(1);
+        } catch (SQLException ex) {
+            System.out.println(ex.getMessage());
+            return null;
+        }
+    }
 }

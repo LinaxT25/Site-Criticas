@@ -49,5 +49,13 @@
     <servlet-name>CriticasController</servlet-name>
     <url-pattern>/criticas</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>MoviesController</servlet-name>
+    <servlet-class>MoviesController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>MoviesController</servlet-name>
+  <url-pattern>/movies</url-pattern>
+  </servlet-mapping>
 </web-app>
 

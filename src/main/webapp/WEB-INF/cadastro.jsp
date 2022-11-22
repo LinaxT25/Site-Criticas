@@ -12,7 +12,7 @@
                 max-height: 1080px;
             }
 
-            .backgroundCadastro{
+            .backgroundCadastro {
                 position: relative;
                 width: 1000px;
                 height: 650px;
@@ -21,7 +21,7 @@
                 background: rgba(34, 34, 34, 0.9);
             }
 
-            .backgroundFilme{
+            .backgroundFilme {
                 position: relative;
                 width: 450px;
                 height: 650px;
