@@ -117,7 +117,7 @@
         <header>
             <div class="blackFrame"></div>
             <div class="line"></div>
-            <div class="criticasNet"></div>
+            <div class="criticasNet" onclick="window.open('home')" style="cursor:pointer;"></div>
             <span class="catalogos" onclick="window.open('catalogos')" style="cursor:pointer;">Catálogos</span>
             <span class="login" onclick="window.open('login')" style="cursor:pointer;">Login</span>
             <span class="novaCritica" onclick="window.open('criticas')" style="cursor:pointer;">Nova Critica</span>
